@@ -14,14 +14,14 @@ services:
     volumes:
       - 'pulse:/run/pulse'        # Only required if using PA over UNIX socket
   minio:
-    image: minio/minio:RELEASE.2021-06-17T00-10-46Z
+    image: minio/minio:RELEASE.2022-06-10T16-59-15Z
     volumes:
       - 'shared-data:/data1'
     ports:
       - "9000:9000"
     environment:
-      MINIO_ACCESS_KEY: MINIO_ROOT_USER
-      MINIO_SECRET_KEY: MINIO_ROOT_PASSWORD
+      MINIO_ACCESS_KEY: username
+      MINIO_SECRET_KEY: password
       MINIO_REGION_NAME: myregion
     command: minio server /data1
     telegram-block:

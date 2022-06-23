@@ -5,31 +5,26 @@ volumes:
     web-data:
 services:
   audio:
-    image: bh.cr/balenablocks/audio-<arch> # where <arch> is one of rpi, armv7hf, aarch64 or amd64
+    image: bh.cr/balenablocks/audio-aarch64 # where <arch> is one of rpi, armv7hf, aarch64 or amd64
     privileged: true
-    labels:
-      io.balena.features.dbus: 1  # Only required for bluetooth support
     ports:
       - 4317:4317                 # Only required if using PA over TCP socket
-    volumes:
-      - 'pulse:/run/pulse'        # Only required if using PA over UNIX socket
   minio:
     image: minio/minio:RELEASE.2022-06-10T16-59-15Z
     volumes:
       - 'shared-data:/data1'
     ports:
       - "9000:9000"
+      - '9001:9001'
     environment:
       MINIO_ACCESS_KEY: username
       MINIO_SECRET_KEY: password
       MINIO_REGION_NAME: myregion
-    command: minio server /data1
-    telegram-block:
-    image: mithundotdas/telegram-block:armv7hf
-    restart: always
-    network_mode: host
-    volumes: 
-            - 'shared-media:/var/media'
+    command: server --address ":9000" --console-address ":9001" /data1
+  woofer:
+    build: ./woofer
+    privileged: true
     environment:
-            - TG_TOKEN=5549716952:AAHmbPUUd3UHynvJ7nfcJgJZ_Cp2YejQSJc
-            - TG_CHAT_ID=balenawoof_bot
+      PULSE_SERVER: tcp:audio:4317
+    volumes:
+        - 'shared-data:/data/my_data'

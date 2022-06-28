@@ -9,5 +9,6 @@ RUN \
     pip3 install requests
 
 COPY *.py ./
+COPY *.wav ./
 
 CMD [ "sleep", "infinity" ]

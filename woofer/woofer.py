@@ -34,10 +34,6 @@ except Exception as e:
     timeout_limit = 5
 
 sendgrid_api_key = os.getenv('SENDGRID_API_KEY', '')
-###
-###     DELETE THE KEY BELOW! ####
-###
-sendgrid_api_key = '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'
 if sendgrid_api_key == '':
     print("Warning, SENDGRID_API_KEY is not set! You can't send e-mails!")
 

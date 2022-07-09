@@ -11,6 +11,8 @@ Sends anvia SendGrid email if addresses and API are configured
 
 ## Building the device
 
+![Assembly diagram](/assets/assembly diagram.jpg)
+
 The device consists of the following components:
 - Raspberry Pi
 - Button

@@ -1,6 +1,6 @@
 # balena-woof
 
-Overview
+## Overview
 Here are the features of balena-woof
 
 Produces a sound and notification when button is pressed
@@ -9,7 +9,7 @@ Has an adjustable "cooldown" to prevent spamming
 Utilizes an LED to show when the cooldown has ended
 Sends anvia SendGrid email if addresses and API are configured
 
-Building the device
+## Building the device
 
 The device consists of the following components:
 - Raspberry Pi
@@ -19,17 +19,17 @@ The device consists of the following components:
 
 In its most basic form, the device is simply a speaker, a button and an LED plugged into a Raspberry Pi. My main draft of the device included a breadboard and 4 additional green LEDs to signify different things, but in the end I diverted my focus back to other features that were not dependant on the additional hardware. So if you want to build this, you should be able to plug in a usb speaker and wire the button and LED and call it done! Hopefully I'll be able to add some additional features that will make use of additional add-ons later down the line.
 
-How it works
+## How it works
 
 We use the balena platform to run two containers on the device. Each container provides separate functionality.
 
-Audio
+### Audio
 This is our beloved audio block that runs a PulseAudio server optimized for balenaOS and is the core of balenaSound. We use it here to take care of setting up and routing all audio needs on the Pi hardware, so the noise container just sends its audio here.
 
-Woofer
+### Woofer
 A custom python program that interprets GPIO input and plays the wav file using the audio block.
 
-Setting it up
+## Setting it up
 
 Assuming you have it built out and put in an enclosure of your choosing, all that's left is some slight configuration. Out of the box the device is configured to play the 'default' sound. If you were to hit that button immediately after deploying the application, the voice will tell you you need to map a sound using the environmental variable. To adjust this, simply modify the variable to one of the following included sound files:
 - outside.wav

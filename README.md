@@ -11,12 +11,13 @@ Sends anvia SendGrid email if addresses and API are configured
 
 ## Building the device
 
-![Assembly diagram](/assets/assembly diagram.jpg)!
+![assembly diagram](https://user-images.githubusercontent.com/101855796/178084327-a7116ce6-2235-444b-82f0-1a0a83b901d8.jpg)
 
 The device consists of the following components:
 - Raspberry Pi
 - Button
-- Speaker 
+- Speaker
+
 - Wire
 
 In its most basic form, the device is simply a speaker, a button and an LED plugged into a Raspberry Pi. My main draft of the device included a breadboard and 4 additional green LEDs to signify different things, but in the end I diverted my focus back to other features that were not dependant on the additional hardware. So if you want to build this, you should be able to plug in a usb speaker and wire the button and LED and call it done! Hopefully I'll be able to add some additional features that will make use of additional add-ons later down the line.

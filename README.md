@@ -61,6 +61,4 @@ The following environment variables allow some degree of configuration:
 | `AUDIO_VOLUME` | Initial volume level for the default audio output device. | `75%` | Any value between 0-100%. |
 | `SENDGRID_API_KEY` | Your unique generated API from SendGrid to allow email notifications. | `` | Specific case sensitive key. |
 | `SOUND_FILE` | Sound file you want the device to play. More can be added by dropping audio files in the 'woofer' folder. | `default.wav` | 
-<br>- `outside.wav`: "Outside" <br>-
-<br>- `hungry.wav`: "I'm hungry" <br>-
-<br>- `outside.wav`: "Outside <br>-
+<br>- `default.wav`: "Please select an environmental variable" <br>-<br>- `outside.wav`: "Outside" <br>-<br>- `hungry.wav`: "I'm hungry" <br>-<br>- `sorry dave.wav`: "I'm sorry Dave, I'm afraid I can't do that. <br>-

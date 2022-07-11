@@ -37,17 +37,10 @@ A custom python program that interprets GPIO input and plays the wav file using 
 
 ## Setting it up
 
-Assuming you have it built out and put in an enclosure of your choosing, all that's left is some slight configuration. Out of the box the device is configured to play the 'default' sound. If you were to hit that button immediately after deploying the application, the voice will tell you you need to map a sound using the environmental variable. To adjust this, simply modify the variable to one of the following included sound files:
-- outside.wav
-- hungry.wav
-- sorry dave.wav
-
-You can also easily include your own sounds! Just make sure you convert them to a 16-bit PCM WAV file so they are compatible with pygame. Audacity is a good tool for this.
+Assuming you have it built out and put in an enclosure of your choosing, all that's left is some slight configuration. Out of the box the device is configured to play the 'default' sound. If you were to hit that button immediately after deploying the application, the voice will tell you you need to map a sound using the environmental variable. To adjust this, please see the 'Environmental variables' section below. Presets are included, but can also easily include your own sounds! Just make sure you convert them to a 16-bit PCM WAV file so they are compatible with pygame. Audacity is a good tool for this.
 
 **Quick note**: *If that voice sounds familiar, you must be a gamer! I made those voice lines using a text to speech application based on GLADOS from the Portal series. The tool I used can be found here:*
 https://glados.c-net.org
-
-By default, the button has a 5 second cooldown. This is to prevent your puppy from spamming the button. If you wish to shorten or extend this, simply modify the 'TIMEOUT_LIMIT' environmental variable.
 
 Finally, there is also a feature to send you an email when the button is pressed. This is handy if you want to know your dog pressed the button when you weren't around. This involves setting up a SendGrid account and verified sender. Their free plan lets you send 100 emails a day, which should hopefully be sufficient for this purpose. I won't go into how to set that up since their documentation covers it pretty well, just know that you need to put your 'to' and 'from' addresses into woofer.py, as well as include your API key using the 'SENDGRID_API_KEY' environmental variable.
 
@@ -61,4 +54,4 @@ The following environment variables allow some degree of configuration:
 | `AUDIO_VOLUME` | Initial volume level for the default audio output device. | `75%` | Any value between 0-100%. |
 | `SENDGRID_API_KEY` | Your unique generated API from SendGrid to allow email notifications. |  | Specific case sensitive key. |
 | `SOUND_FILE` | Sound file you want the device to play. More can be added by dropping audio files in the 'woofer' folder. | `default.wav` | -`default.wav`: "Please select an environmental variable" <br><br>- `outside.wav`: "Outside" <br><br>- `hungry.wav`: "I'm hungry" <br><br>- `sorry dave.wav`: "I'm sorry Dave, I'm afraid I can't do that. <br>
-| `TIMEOUT_LIMIT` | The ammount of seconds the device spends in 'cooldown' after a successful push. | `5` | Any interger |
+| `TIMEOUT_LIMIT` | The number of seconds the device spends in 'cooldown' after a successful push. | `5` | Any interger |

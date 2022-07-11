@@ -50,3 +50,14 @@ https://glados.c-net.org
 By default, the button has a 5 second cooldown. This is to prevent your puppy from spamming the button. If you wish to shorten or extend this, simply modify the 'TIMEOUT_LIMIT' environmental variable.
 
 Finally, there is also a feature to send you an email when the button is pressed. This is handy if you want to know your dog pressed the button when you weren't around. This involves setting up a SendGrid account and verified sender. Their free plan lets you send 100 emails a day, which should hopefully be sufficient for this purpose. I won't go into how to set that up since their documentation covers it pretty well, just know that you need to put your 'to' and 'from' addresses into woofer.py, as well as include your API key using the 'SENDGRID_API_KEY' environmental variable.
+
+## Environmental variables
+
+The following environment variables allow some degree of configuration:
+
+| Environment variable | Description | Default | Options | 
+| --- | --- | --- | --- |
+| `AUDIO_OUTPUT` | Select the default audio output device. <br>Can also be changed at runtime by using the [companion library](#companion-library) | `AUTO` | For all device types: <br>- `AUTO`: Let PulseAudio decide. Priority is `USB > DAC > HEADPHONES > HDMI`<br>- `DAC`: Force default output to be an attached GPIO based DAC<br>- `<PULSE_SINK_NAME>`: If you know the sink name you can force set it too. Note that you can't use this to set custom sinks as default, in that case use `set-default-sink` on your custom pa script. <br><br> For Raspberry Pi devices: <br>- `RPI_AUTO`: BCM2835 automatic audio switching as described [here](https://web.archive.org/web/20200427023741/https://www.raspberrypi.org/documentation/configuration/audio-config.md). Deprecated for devices running Linux kernel 5.4 or newer. <br>- `RPI_HEADPHONES`: 3.5mm audio jack <br>- `RPI_HDMI0`: Main HDMI port <br>- `RPI_HDMI1`: Secondary HDMI port (only Raspberry Pi 4) <br><br> For Intel NUC: <br>- NUCs have automatic output detection and switching. If you plug both the HDMI and the 3.5mm audio jack it will use the latter.  |
+| `AUDIO_VOLUME` | Initial volume level for the default audio output device. | `75%` | Any value between 0-100%. |
+| `SENDGRID_API_KEY` | Your unique generated API from SendGrid to allow email notifications. | `` | Specific case sensitive key. |
+| `SOUND_FILE` | Sound file you want the device to play. More can be added by dropping audio files in the 'woofer' folder. | `default.wav` | <br>- `outside.wav`: "Outside <br>- | <br>- `hungry.wav`: "I'm hungry" <br>- | <br>- `outside.wav`: "Outside <br>- | <br>- `hungry.wav`: "I'm hungry" <br>- |

@@ -40,6 +40,7 @@ A custom python program that interprets GPIO input and plays the wav file using 
 Assuming you have it built out and put in an enclosure of your choosing, all that's left is some slight configuration. Out of the box the device is configured to play the 'default' sound. If you were to hit that button immediately after deploying the application, the voice will tell you you need to map a sound using the environmental variable. To adjust this, simply modify the variable to one of the following included sound files:
 - outside.wav
 - hungry.wav
+- sorry dave.wav
 
 You can also easily include your own sounds! Just make sure you convert them to a 16-bit PCM WAV file so they are compatible with pygame. Audacity is a good tool for this.
 

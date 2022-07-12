@@ -5,13 +5,11 @@ Turn a Raspberry Pi into a button your dog or cat can use to convey a message to
 
 
 ## Overview
-Here are the features of balena-woof
-
-Produces a sound and notification when button is pressed
+A simple device that produces a sound and notification when button is pressed
 Sound can be adjusted using an environmental variable. Several sounds are included, but more can be added easily
 Has an adjustable "cooldown" to prevent spamming
 Utilizes an LED to show when the cooldown has ended
-Sends anvia SendGrid email if addresses and API are configured
+Sends an email via SendGrid if addresses and API are configured
 
 ## Building the device
 

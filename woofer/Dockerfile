@@ -6,9 +6,9 @@ RUN \
     apt-get update && apt-get install -y python3-pygame libfreetype6-dev # Needed for Pillow font use
 
 RUN \
-    pip3 install requests
+    pip3 install requests RPi.GPIO sendgrid
 
 COPY *.py ./
 COPY *.wav ./
 
-CMD [ "sleep", "infinity" ]
+CMD [ "python3", "woofer.py" ]

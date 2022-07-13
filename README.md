@@ -53,3 +53,12 @@ The following environment variables allow some degree of configuration:
 | `SENDGRID_API_KEY` | Your unique generated API from SendGrid to allow email notifications. |  | Specific case sensitive key. |
 | `SOUND_FILE` | Sound file you want the device to play. More can be added by dropping audio files in the 'woofer' folder. | `default.wav` | -`default.wav`: "Please select an environmental variable" <br><br>- `outside.wav`: "Outside" <br><br>- `hungry.wav`: "I'm hungry" <br><br>- `sorry dave.wav`: "I'm sorry Dave, I'm afraid I can't do that. <br>
 | `TIMEOUT_LIMIT` | The number of seconds the device spends in 'cooldown' after a successful push. | `5` | Any interger |
+
+## Feature roadmap
+With the foundation built. my goal to add more features that will expand its functionality and give it make it "smarter". These features include but are not limited to:
+- Set up multiple button support on one device (This one is easy)
+- Minio integration to improve sound file hosting of the fleet
+- Configure for a push notification app
+- Add support for a volume adjustment knob
+- Add Grafana support to track button presses
+- Add camera support to take a picture when the button is pressed and add that picture to emails, notifications, etc.

@@ -55,7 +55,7 @@ The following environment variables allow some degree of configuration:
 | `TIMEOUT_LIMIT` | The number of seconds the device spends in 'cooldown' after a successful push. | `5` | Any interger |
 
 ## Feature roadmap
-With the foundation built. my goal to add more features that will expand its functionality and give it make it "smarter". These features include but are not limited to:
+With the foundation built, my goal to add more features that will expand its functionality and give it make it "smarter". These features include but are not limited to:
 - Set up multiple button support on one device (This one is easy)
 - Minio integration to improve sound file hosting of the fleet
 - Configure for a push notification app

@@ -9,18 +9,6 @@ services:
     privileged: true
     ports:
       - 4317:4317                 # Only required if using PA over TCP socket
-  minio:
-    image: minio/minio:RELEASE.2022-06-10T16-59-15Z
-    volumes:
-      - 'shared-data:/data1'
-    ports:
-      - "9000:9000"
-      - '9001:9001'
-    environment:
-      MINIO_ACCESS_KEY: username
-      MINIO_SECRET_KEY: password
-      MINIO_REGION_NAME: myregion
-    command: server --address ":9000" --console-address ":9001" /data1
   woofer:
     build: ./woofer
     privileged: true

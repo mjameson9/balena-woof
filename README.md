@@ -40,7 +40,7 @@ Assuming you have it built out and put in an enclosure of your choosing, all tha
 **Quick note**: *If that voice sounds familiar, you must be a gamer! I made those voice lines using a text to speech application based on GLADOS from the Portal series. The tool I used can be found here:*
 https://glados.c-net.org
 
-Finally, there is also a feature to send you an email when the button is pressed. This is handy if you want to know your dog pressed the button when you weren't around. This involves setting up a SendGrid account and verified sender. Their free plan lets you send 100 emails a day, which should hopefully be sufficient for this purpose. I won't go into how to set that up since their documentation covers it pretty well, just know that you need to put your 'to' and 'from' addresses into woofer.py, as well as include your API key using the 'SENDGRID_API_KEY' environmental variable.
+Finally, there is also a feature to send you an email when the button is pressed. This is handy if you want to know if your dog pressed the button when you weren't around. This involves setting up a SendGrid account and verified sender. Their free plan lets you send 100 emails a day, which should hopefully be sufficient for this purpose. I won't go into how to set that up since their documentation covers it pretty well, just know that you need to put your 'to' and 'from' addresses into woofer.py, as well as include your API key using the 'SENDGRID_API_KEY' environmental variable.
 
 ## Environmental variables
 

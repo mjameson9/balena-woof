@@ -1,0 +1,29 @@
+name: balena-woof
+type: sw.application
+description: >-
+  Help your dog communicate using a button, speaker, and
+  Raspberry Pi!
+assets:
+  repository:
+    type: blob.asset
+    data:
+      url: 'https://github.com/mjameson9/balena-woof'
+  logo:
+    type: blob.asset
+    data:
+      url: >-
+        https://raw.githubusercontent.com/mjameson9/balena-woof/main/logo.png
+data:
+  applicationEnvironmentVariables:
+    - SOUND_VOLUME: 75
+    - AUDIO_OUTPUT: AUTO
+    - SENDGRID_API_KEY:
+    - SOUND_FILE: default.wav
+    - TIMEOUT_LIMIT: 5
+
+  defaultDeviceType: raspberry-pi
+  supportedDeviceTypes:
+    - raspberrypi3
+    - raspberrypi4-64
+
+version: 1.0.0

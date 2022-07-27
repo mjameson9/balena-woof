@@ -19,7 +19,8 @@ The device consists of the following components:
 - Speaker
 - Wire
 
-![assembly diagram](https://user-images.githubusercontent.com/101855796/178554247-688b6cd9-1034-4c22-967b-5d92ac6d7efd.jpg)
+![fritzing diag](https://user-images.githubusercontent.com/101855796/181372419-4c8b8e1e-7096-427b-88c1-16360db64d2f.jpg)
+
 
 In its most basic form, the device is simply a speaker, a button and an LED plugged into a Raspberry Pi. My main draft of the device included a breadboard and 4 additional green LEDs to signify different things, but in the end I diverted my focus back to other features that were not dependant on the additional hardware. So if you want to build this, you should be able to plug in a usb speaker and wire the button and LED and call it done! Hopefully I'll be able to add some additional features that will make use of additional add-ons later down the line.
 

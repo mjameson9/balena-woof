@@ -25,9 +25,9 @@ In its most basic form, the device is simply a speaker, a button and an LED plug
 
 ## Wiring
 
-LED should be connected to GPIO 20
-Switch should be connected to GPIO 21
-Don't forget your ground wires!
+- LED should be connected to GPIO 20
+- Switch should be connected to GPIO 21
+- Don't forget your ground wires!
 
 ## How it works
 
